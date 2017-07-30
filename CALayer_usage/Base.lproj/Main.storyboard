@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ye3-bC-Dcp">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--View Controller5-->
+        <scene sceneID="UqC-9l-2Ov">
+            <objects>
+                <viewController id="Ye3-bC-Dcp" customClass="ViewController5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Oc6-BT-DRD"/>
+                        <viewControllerLayoutGuide type="bottom" id="FT7-rw-Jcj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iwo-aF-LdI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MTG-B4-ip9">
+                                <rect key="frame" x="16" y="20" width="343" height="552"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jyP-aD-EsT">
+                                <rect key="frame" x="16" y="577" width="343" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="2RY-o3-QWT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonAction:" destination="Ye3-bC-Dcp" eventType="touchUpInside" id="6qZ-xI-nWW"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pcP-75-CFI">
+                                <rect key="frame" x="16" y="631" width="343" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="g8U-3Z-CLz"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Top"/>
+                                    <segment title="Left"/>
+                                    <segment title="Bottom"/>
+                                    <segment title="Right"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentAction:" destination="Ye3-bC-Dcp" eventType="valueChanged" id="ety-h0-vpq"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="pcP-75-CFI" secondAttribute="trailing" id="3cd-QD-PNF"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="MTG-B4-ip9" secondAttribute="leading" id="Afg-8r-QvM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jyP-aD-EsT" secondAttribute="trailing" id="BHb-ih-vfk"/>
+                            <constraint firstItem="MTG-B4-ip9" firstAttribute="top" secondItem="Oc6-BT-DRD" secondAttribute="bottom" id="GHU-Rc-EGY"/>
+                            <constraint firstItem="FT7-rw-Jcj" firstAttribute="top" secondItem="MTG-B4-ip9" secondAttribute="bottom" constant="95" id="K5J-yv-c5J"/>
+                            <constraint firstItem="pcP-75-CFI" firstAttribute="top" secondItem="jyP-aD-EsT" secondAttribute="bottom" constant="12" id="Rna-fH-8t2"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="pcP-75-CFI" secondAttribute="leading" id="Yss-y6-rHi"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="jyP-aD-EsT" secondAttribute="leading" id="hAf-8b-ZOE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="MTG-B4-ip9" secondAttribute="trailing" id="r7f-e2-Tk1"/>
+                            <constraint firstItem="jyP-aD-EsT" firstAttribute="top" secondItem="MTG-B4-ip9" secondAttribute="bottom" constant="5" id="y4l-9q-TIa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="MTG-B4-ip9" id="EPz-by-zCh"/>
+                        <outlet property="tramsitionButton" destination="jyP-aD-EsT" id="ENZ-wT-ZTb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RFz-Qo-57v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885.60000000000002" y="38.23088455772114"/>
+        </scene>
+    </scenes>
+</document>
